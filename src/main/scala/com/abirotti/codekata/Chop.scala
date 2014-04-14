@@ -12,7 +12,6 @@ object Chop {
 
   /**
    * Tail Recursive with accumulator and pattern matching
-   * A few problems slicing the list and keeping track of the accumulated index correctly
    *
    * Not so readable
    */
