@@ -1,6 +1,6 @@
 package com.abirotti.codekata
 
-import org.scalatest.FunSuite
+import org.scalatest.{BeforeAndAfterAll, FunSuite}
 import org.scalatest.matchers.ShouldMatchers
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
@@ -12,10 +12,10 @@ import org.scalatest.junit.JUnitRunner
 class ChopTest
   extends FunSuite
   with ShouldMatchers
+  with BeforeAndAfterAll
 {
 
   test("empty sequence doesn't contain 1") {
-    println("WTH")
     Chop.chop(1, Nil) should be(-1)
   }
 
@@ -47,4 +47,5 @@ class ChopTest
     Chop.chop(4, List(1, 3, 5, 7)) should be(-1)
     Chop.chop(6, List(1, 3, 5, 7)) should be(-1)
   }
+
 }

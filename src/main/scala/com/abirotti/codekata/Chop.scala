@@ -11,7 +11,7 @@ import org.junit.runners.JUnit4
 object Chop {
 
   /**
-   * Tail Recursive with accumulator and pattern matching
+   * Tail Recursive with (optional) accumulator and pattern matching
    *
    * Not so readable
    */
@@ -23,7 +23,7 @@ object Chop {
       case 1 => if (int == array(0)) 0 else -1
       case x if x > 1 => {
         val mid = (array.size / 2)
-        int compareTo array(mid) match{
+        (int compareTo array(mid): @switch) match{
           case 0 => mid + indexAcc
           case -1 => chop(int, array.slice(0, mid), indexAcc)
           case 1 => chop(int, array.slice(mid, array.size) , mid)
@@ -41,6 +41,6 @@ object Chop {
     result
   }
   /**
-   * Functional Composition
+   * Functional Composition?
    */
 }
